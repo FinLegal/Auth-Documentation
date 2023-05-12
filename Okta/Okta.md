@@ -1,6 +1,7 @@
 # Configuring Okta for SSO
 Before beginning the setup you will need the following information from FinLegal. Please speak to your account manager who can supply this information:
 * Sign-in redirect URI
+* Initiate login URI
 
 ## Step 1: Creating A New App Integration in Okta
 1. Sign in to your Okta Admin Dashboard and navigate to `Applications`.
@@ -35,10 +36,17 @@ We will then send you the url your users will use to initiate the login for SSO.
 ## Step 3: Adding The Initiate Login URI
 1. Locate the `Claims Automation by Finlegal` application and click to view the settings.
 2. Click `Edit` in the `General Settings` section.
-3. Now update the `Initiate login URI` and `Save`.<br /><br />![Alt text](Create-New-App-Step3.png)
+3. Now complete the following and click `Save`.
+
+Setting | Detail
+---|---
+Initiate login URI | Please speak to your account manager for this value.
+
+Example:
+<br />![Alt text](Create-New-App-Step3.png)
 
 ## Step 4: Testing SSO
-Direct your users to follow the initiate login URI. They may, or may not, be asked to authenticate by Okta after which they will be redirected to Claims Automation having been signed in.
+Direct your users to follow the Initiate Login URI. They may, or may not, be asked to authenticate by Okta after which they will be redirected to Claims Automation as per the example below.
 
 https://user-images.githubusercontent.com/1143865/225955073-16c93495-a1cc-49bc-b982-129a4d086e58.mp4
 
