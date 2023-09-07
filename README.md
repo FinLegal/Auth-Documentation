@@ -11,5 +11,19 @@ Once configured correctly we will provide you with an initiate login URI. This w
 [Follow our guide](Okta/Okta.md)
 
 ## How-to configure Azure AD for SSO
-TBC
+A guide on configuring a new application: [Quickstart: Register an app in the Microsoft identity platform - Microsoft Entra | Microsoft Learn](https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app)
+*	Redirect URI = https://uk.casefunnel.io/oidc/authorize
+*	From the Configure platform settings please select Web
+*	From the Add credentials follow instructions Add a client secret
+*	Please send us the Client\Application ID & the new client secret
+*	Please can you also send across the following two endpoints:
+  *	Back in App registrations, select and open the new registration.
+  * Whilst the Overview option is selected you should see a tab called Endpoints
+    *	OAuth 2.0 authorization endpoint (v2)
+    *	OpenID Connect metadata document
+*	You may need to configure the admin consent
+*	Please select API permissions on the left hand side menu
+*	Under configured permissions click the “Grant admin consent for X” (where X is the name of your Azure AD instance)
+*	In the list of permissions the final column should update to say “Granted for X” (where X is the name of your Azure AD instance)
 
+This is url you will need to initiate the authentication flow: https://uk.casefunnel.io/oidc/signin/XX once everything is configured
